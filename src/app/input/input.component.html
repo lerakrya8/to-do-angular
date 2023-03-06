@@ -1,0 +1,2 @@
+<input (keyup.enter)="addToList($event)" class="inputAdd" type="text" #toDoInput placeholder="Enter action to do" autoFocus/>
+<button (click)="addToListByButton(toDoInput.value); toDoInput.value = ''" class="btn">Add</button>

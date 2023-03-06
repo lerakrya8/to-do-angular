@@ -1,0 +1,7 @@
+<div *ngFor="let action of toDoActions$ | async" class="action">
+    <div>
+        <input id="toggle-action-{{action.id}}" (click)="updateAction(checkboxToDo.value)" class="custom-checkbox" type="checkbox" #checkboxToDo [value]="action.id" [checked]="action.isChecked"/>
+        <label for="toggle-action-{{action.id}}" class="{{action.isChecked ? 'cross-label' : ''}}">{{action.name}}</label>
+        <button (click)="deleteAction(checkboxToDo.value)" class="btn-delete">Del</button>
+    </div>
+</div>
